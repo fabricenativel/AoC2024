@@ -50,6 +50,9 @@ def check3(result, operands):
 values = [check(res, oper) for (res,oper) in zip(results, operands)]
 p1 = sum([v[1] for v in values])
 print(f"Résultat partie 1 = {p1}")
+for (res,oper) in zip(results, operands):
+    if check(res,oper)[0]:
+        print(res)
 
 values = [check3(res, oper) for (res,oper) in zip(results, operands)]
 p2 = sum([v[1] for v in values])
